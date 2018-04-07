@@ -4,4 +4,4 @@ from RestApiTest.models import RestTest
 class TestSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = RestTest
-        fields = ('Hello')
+        fields = '__all__'
