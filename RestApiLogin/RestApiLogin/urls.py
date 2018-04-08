@@ -15,12 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from rest_login.views import CreateUserView
+from rest_login.views import HomeView
+from rest_login.views import UserCreateView, UserCreateDone
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('django.contrib.auth.urls')),
-    path('signup/', CreateUserView.as_view(), name='signup'),
-    #path('login/done$', RegistedSignView.as_view(), name='create_user_done'),
 
+    # Auth URL
+    path(r'accounts/', include('django.contrib.auth.urls')),
+    path(r'accounts/register/$', UserCreateView.as_view(), name='register'),
+    path(r'accounts/register/done/$', UserCreateDone.as_view(), name = 'register_done'),
+
+    path(r'^$', HomeView.as_view() , name = 'index' )
 ]
