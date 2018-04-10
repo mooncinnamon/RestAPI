@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "index.html" %}
 
 {% block title %}login.html{% endblock %}
 
@@ -6,35 +6,38 @@
 {% block extrastyle %}{% static "css/forms.css" %}{% endblock %}
 
 {% block content %}
-    <div id=content=">
-        <h1>Please Login</h1>
+<div id="content">
 
-        <form action="." method="post">{% csrf_token %}
-            {% if form.errors %}
-                <p class="errornote">Wrong! Please correct the error(s) below.</p>
-            {% endif %}
+    <h1>Please Login </h1>
 
-            <p>Please enter your id and password</p>
+    <form action="." method="post">{% csrf_token %}
 
-            <fieldset class="aligned">
-                <div class="form-row">
-                    {{ form.username.label_tag }} {{ form.username }}
-                </div>
+    {% if form.errors %}
+    <p class="errornote">Wrong! Please correct the error(s) below.</p>
+    {% endif %}
 
-                <div class="form-row">
-                    {{ form.password.label_tag }} {{ form.password }}
-                </div>
-            </fieldset>
+    <p>Please enter your id and password.</p>
 
-            <div class="submit-row">
-                <input type="submit" value="Log In"/>
-                <input type="hidden" name="next" value="{{ next }}"/>
-            </div>
+    <fieldset class="aligned">
 
-            <script type="text/javascript">document.getElementById('id_username').focus();
-            </script>
-        </form>
+        <div class="form-row">
+            {{ form.username.label_tag }} {{ form.username }}
+        </div>
+    
+        <div class="form-row">
+            {{ form.password.label_tag }} {{ form.password }}
+        </div>
 
+    </fieldset>
 
+    <div class="submit-row">
+        <input type="submit" value="Log In"/>
+        <!-- input type="hidden" name="next" value="/" / -->
+        <input type="hidden" name="next" value="{{ next }}" />
     </div>
+
+    <script type="text/javascript">document.getElementById('id_username').focus();</script>
+    </form>
+
+</div>
 {% endblock %}

@@ -1,4 +1,4 @@
-"""RestApiLogin URL Configuration
+"""RestLogin URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.0/topics/http/urls/
@@ -15,16 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from rest_login.views import HomeView
-from rest_login.views import UserCreateView, UserCreateDone
+
+from .views import IndexView
+from .views import UserCreateView, UserCreateDone
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
-    # Auth URL
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/register/', UserCreateView.as_view(), name='register'),
     path('accounts/register/done/', UserCreateDone.as_view(), name='register_done'),
 
-    path('', HomeView.as_view(), name='index')
+    path('', IndexView.as_view(), name='index')
 ]

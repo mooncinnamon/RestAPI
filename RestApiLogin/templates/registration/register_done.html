@@ -1,13 +1,15 @@
-{% extends 'base.html' %}
+{% extends "index.html" %}
 
-{% block title %}register_done.html{% endblock %}
+{% block title %}register_success.html{% endblock %}
 
 {% block content %}
-    <div id="content">
-        <h1>Registration Completed Successfully</h1>
+<div id="content">
 
-        <p>Thank you for registering.</p>
+    <h1>Registration Completed Successfully</h1>
 
-        <p><a href="{% url 'login' %}">Log in again</a></p>
-    </div>
+    <p>Thank you for registering.</p>
+
+    <p><a href="{% url 'login' %}">Log in again</a></p>
+
+</div>
 {% endblock %}
