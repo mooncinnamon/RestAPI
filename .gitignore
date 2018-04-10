@@ -20,4 +20,4 @@ build/
 tests/report/
 
 #RestApiLogin
-RestApiLogin/.idea/
+RestApiLogin/.idea/workspace.xml
