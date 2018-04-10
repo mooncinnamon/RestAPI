@@ -6,6 +6,7 @@
 *.pot
 *.py[co]
 .tox/
+*.sqlite3
 __pycache__
 
 
@@ -19,5 +20,17 @@ tests/.coverage
 build/
 tests/report/
 
-#RestApiLogin
-RestApiLogin/.idea/workspace.xml
+# RootDirectory
+.idea/
+
+# RestAPI-Django
+RestAPI-Django/.idea/
+RestAPI-Django/__pycache__/
+RestAPI-Django/local_settings.py
+RestAPI-Django/media
+
+# RestAPILogin
+RestAPILogin/.idea/
+RestAPILogin/__pycache__/
+RestAPILogin/local_settings.py
+RestAPILogin/media
