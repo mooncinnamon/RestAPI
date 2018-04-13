@@ -6,6 +6,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 
 from rest_framework import viewsets
+
 from login.serializers import UserSerializer
 
 UserModel = get_user_model()

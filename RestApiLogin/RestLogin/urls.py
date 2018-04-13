@@ -21,8 +21,9 @@ from .views import IndexView
 from .views import UserCreateView, UserCreateDone
 from .views import UserViewSet
 
+
 router = routers.DefaultRouter()
-router.register('logins', UserViewSet)
+router.register('user', UserViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -31,7 +32,7 @@ urlpatterns = [
     path('accounts/register/done/', UserCreateDone.as_view(), name='register_done'),
 
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('rest', include(router.urls)),
+    path('', include(router.urls)),
 
-    path('', IndexView.as_view(), name='index')
+    path('index/', IndexView.as_view(), name='index')
 ]
