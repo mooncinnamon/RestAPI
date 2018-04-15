@@ -24,10 +24,10 @@ tests/report/
 .idea/
 
 # RestAPI-Django
-Django/RestAPI-Django/.idea/
-Django/RestAPI-Django/__pycache__/
-Django/RestAPI-Django/local_settings.py
-Django/RestAPI-Django/media
+Django/RestAPIDjango/.idea/
+Django/RestAPIDjango/__pycache__/
+Django/RestAPIDjango/local_settings.py
+Django/RestAPIDjango/media
 
 # RestAPILogin
 Django/RestAPILogin/.idea/
