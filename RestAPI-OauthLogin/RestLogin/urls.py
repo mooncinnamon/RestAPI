@@ -32,7 +32,7 @@ urlpatterns = [
     path('accounts/register/done/', UserCreateDone.as_view(), name='register_done'),
 
     path('oauth/', include('oauth2_provider.urls', namespace='oauth2_provider')),
-    path('sign_up/', include('login.urls')),
+    path('sign-up/', include('login.urls')),
 
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('', include(router.urls)),
