@@ -34,3 +34,9 @@ RestAPILogin/.idea/
 RestAPILogin/__pycache__/
 RestAPILogin/local_settings.py
 RestAPILogin/media
+
+# RestAPIOauthLogin
+RestAPIOauthLogin/.idea/
+RestAPIOauthLogin/__pycache__/
+RestAPIOauthLogin/local_settings.py
+RestAPIOauthLogin/media

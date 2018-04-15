@@ -1,4 +1,4 @@
-"""RestApi URL Configuration
+"""RestLogin URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.0/topics/http/urls/
@@ -16,13 +16,26 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from RestApiTest import views
+
+from .views import IndexView
+from .views import UserCreateView, UserCreateDone
+from .views import UserViewSet
+
 
 router = routers.DefaultRouter()
-router.register(r'resttests', views.RestTestViewSet)
+router.register('user', UserViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include(router.urls)),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/register/', UserCreateView.as_view(), name='register'),
+    path('accounts/register/done/', UserCreateDone.as_view(), name='register_done'),
+
+    path('oauth/', include('oauth2_provider.urls', namespace='oauth2_provider')),
+    path('sign_up/', include('login.urls')),
+
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('', include(router.urls)),
+
+    path('index/', IndexView.as_view(), name='index')
 ]
