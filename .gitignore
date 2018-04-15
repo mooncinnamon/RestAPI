@@ -24,25 +24,25 @@ tests/report/
 .idea/
 
 # RestAPI-Django
-RestAPI-Django/.idea/
-RestAPI-Django/__pycache__/
-RestAPI-Django/local_settings.py
-RestAPI-Django/media
+Django/RestAPI-Django/.idea/
+Django/RestAPI-Django/__pycache__/
+Django/RestAPI-Django/local_settings.py
+Django/RestAPI-Django/media
 
 # RestAPILogin
-RestAPILogin/.idea/
-RestAPILogin/__pycache__/
-RestAPILogin/local_settings.py
-RestAPILogin/media
+Django/RestAPILogin/.idea/
+Django/RestAPILogin/__pycache__/
+Django/RestAPILogin/local_settings.py
+Django/RestAPILogin/media
 
 # RestAPIOauthLogin
-RestAPIOauthLogin/.idea/
-RestAPIOauthLogin/__pycache__/
-RestAPIOauthLogin/local_settings.py
-RestAPIOauthLogin/media
+Django/RestAPIOauthLogin/.idea/
+Django/RestAPIOauthLogin/__pycache__/
+Django/RestAPIOauthLogin/local_settings.py
+Django/RestAPIOauthLogin/media
 
 # RestAPIJWTLogin
-RestAPIJWTLogin/.idea/
-RestAPIJWTLogin/__pycache__/
-RestAPIJWTLogin/local_settings.py
-RestAPIJWTLogin/media
+Django/RestAPIJWTLogin/.idea/
+Django/RestAPIJWTLogin/__pycache__/
+Django/RestAPIJWTLogin/local_settings.py
+Django/RestAPIJWTLogin/media

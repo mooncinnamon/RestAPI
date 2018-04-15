@@ -32,10 +32,13 @@ urlpatterns = [
     path('accounts/register/', UserCreateView.as_view(), name='register'),
     path('accounts/register/done/', UserCreateDone.as_view(), name='register_done'),
 
+    path('sign-up/', include('login.urls')),
+
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('api-token-auth/', obtain_jwt_token),
     path('api-token-refresh/', refresh_jwt_token),
     path('api-token-verify/', verify_jwt_token),
+
     path('', include(router.urls)),
 
     path('index/', IndexView.as_view(), name='index')
