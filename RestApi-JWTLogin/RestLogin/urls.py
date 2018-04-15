@@ -20,6 +20,7 @@ from rest_framework import routers
 from .views import IndexView
 from .views import UserCreateView, UserCreateDone
 from .views import UserViewSet
+from rest_framework_jwt.views import obtain_jwt_token, refresh_jwt_token, verify_jwt_token
 
 
 router = routers.DefaultRouter()
@@ -32,6 +33,9 @@ urlpatterns = [
     path('accounts/register/done/', UserCreateDone.as_view(), name='register_done'),
 
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('api-token-auth/', obtain_jwt_token),
+    path('api-token-refresh/', refresh_jwt_token),
+    path('api-token-verify/', verify_jwt_token),
     path('', include(router.urls)),
 
     path('index/', IndexView.as_view(), name='index')
