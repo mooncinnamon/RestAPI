@@ -19,10 +19,10 @@ from rest_framework import routers
 from RestApiTest import views
 
 router = routers.DefaultRouter()
-router.register(r'resttests', views.RestTestViewSet)
+router.register('resttests', views.RestTestViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include(router.urls)),
+    path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
