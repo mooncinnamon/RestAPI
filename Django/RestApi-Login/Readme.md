@@ -1,4 +1,4 @@
-RestAPI - Basic Auth
+# RestAPI - Basic Auth
 
 Django에 있는 auth 를 사용해서 Basic Auth 처리 해보자
 
