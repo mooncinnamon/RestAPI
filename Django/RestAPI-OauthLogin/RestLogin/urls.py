@@ -30,9 +30,9 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/register/', UserCreateView.as_view(), name='register'),
     path('accounts/register/done/', UserCreateDone.as_view(), name='register_done'),
+    path('sign-up/', include('login.urls')),
 
     path('oauth/', include('oauth2_provider.urls', namespace='oauth2_provider')),
-    path('sign-up/', include('login.urls')),
 
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('', include(router.urls)),
