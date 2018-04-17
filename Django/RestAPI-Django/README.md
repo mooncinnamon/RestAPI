@@ -30,10 +30,12 @@ class RestTest(models.Model):
 
 models.py에서는 message 컬럼을 갖는 DB를 만들어준다.
 
+
+
 ![](../img/django-rest-db.png)
 
-
-
 DB는 이렇게 메세지가 들어와있고 PostMan으로 GET을 요청하면
+
+
 
 ![](../img/django-rest-postman.png)

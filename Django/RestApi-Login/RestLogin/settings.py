@@ -106,11 +106,6 @@ REST_FRAMEWORK = {
     ),
 }
 
-JWT_AUTH = {
-    'JWT_AUTH_HEADER_PREFIX' : 'JWT',
-    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=30000)
-}
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
